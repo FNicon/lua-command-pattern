@@ -13,6 +13,9 @@ function Game.update(dt)
 	for i = 1, #objects do
 		if (agents[i] ~= nil) then
 			objects[i].text = agents[i].agent:planToString()
+			if (agents[i].type == "loop") then
+				agents[i].agent:executeLoop()
+			end
 		end
 	end
 end

@@ -46,4 +46,8 @@ function Invoker:planToString()
 	return self.history:toString()
 end
 
+function Invoker:reset()
+	self.history:reset()
+end
+
 return Invoker
